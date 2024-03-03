@@ -1,0 +1,54 @@
+*,*::before 
+{   
+    box-sizing: border-box;margin: 0;padding: 0; overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.logo { width: 26px;}
+
+button,
+input[type='text'],
+input[type='number'] 
+{
+    color: black;
+    padding: .5rem;
+    text-decoration: none;
+    border: 1px solid rgba(178, 168, 168, 0.689);
+    background: transparent;
+    /*background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);*/
+}
+
+button{cursor: pointer;}
+
+input[type='button'],
+a
+{
+    border: none;
+    background: -webkit-linear-gradient(315deg, #383a39 25%, #444446);
+    background-clip: text;-webkit-background-clip: text;-webkit-text-fill-color: transparent;
+}
+a:hover {
+    background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+    background-clip: text;-webkit-background-clip: text;-webkit-text-fill-color: transparent;
+}
+
+table{
+    border-collapse: collapse
+}
+
+.table {
+    overflow-y: scroll;
+    height: clamp(30rem, 30rem, 33rem);
+    border: 1px solid rgba(178, 168, 168, 0.689);
+  }
+
+.table-columns {
+    width: 100%;
+}
+
+th {
+    padding-block: .5rem; font-weight: 500;  
+    border-right: 1px solid rgba(178, 168, 168, 0.689);
+    border-bottom: 1px solid rgba(178, 168, 168, 0.689);
+}
+
