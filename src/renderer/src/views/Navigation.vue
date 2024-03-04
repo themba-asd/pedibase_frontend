@@ -1,8 +1,6 @@
 <script setup>
-import { inject } from 'vue';
 import { RouterView } from 'vue-router';
 import PedibaseLogo from '../components/icons/PedibaseLogo.vue';
-
 
 </script>
 
@@ -21,7 +19,7 @@ import PedibaseLogo from '../components/icons/PedibaseLogo.vue';
         <RouterLink to="/create">Create Record</RouterLink>
       </div>
     </div>
-    <div>
+    <div class="router-view">
       <RouterView />
     </div>
   </div>
@@ -32,7 +30,7 @@ import PedibaseLogo from '../components/icons/PedibaseLogo.vue';
   display: grid;
   height: 100%;
   gap: .1rem;
-  padding: .1rem 0.1rem 0.1rem 0.1rem;
+  padding: .1rem .1rem .1rem .1rem;
   border: 5px solid rgba(178, 168, 168, 0.689);
 }
 .nav {
@@ -46,7 +44,8 @@ import PedibaseLogo from '../components/icons/PedibaseLogo.vue';
   font-size: 18px;
   a {
     padding-inline: 1.5rem;
-    border-left: 1px solid grey;
+    border-left: 1px solid rgb(145, 139, 139);
   }
 }
+
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import ToolsBar from '../components/pedigreedb/ToolBar.vue'
+import ToolsBar from '../components/pedigreedb/SortFilterData.vue'
 import ActionBar from '../components/pedigreedb/ActionButtons.vue'
 import TableData from '../components/pedigreedb/TableData.vue'
 </script>
