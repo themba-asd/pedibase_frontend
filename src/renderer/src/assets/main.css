@@ -11,12 +11,14 @@ input[type='text'],
 input[type='number'] 
 {
     color: black;
-    padding: .5rem;
+    padding: .4rem;
     text-decoration: none;
     border: 1px solid rgba(178, 168, 168, 0.689);
+    margin-right: 1px;
     background: transparent;
     /*background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);*/
 }
+
 
 button{cursor: pointer;}
 

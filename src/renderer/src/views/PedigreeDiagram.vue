@@ -1,4 +1,5 @@
 <script setup></script>
+
 <template>
   <div class="main">
     <div class="child">
@@ -13,7 +14,6 @@
       <div>5</div>
       <div>6</div>
     </div>
-
   </div>
 </template>
 
@@ -23,15 +23,15 @@
   justify-content: center;
   padding: 0rem 1rem;
 }
+
 .child,
 .parents,
-.grandparents 
-{
+.grandparents {
   display: grid;
   align-items: center;
   flex: 1;
 
-  > div {
+  >div {
     display: grid;
     align-items: center;
     width: 12rem;
@@ -40,5 +40,4 @@
     border-left: 1px solid;
   }
 }
-
 </style>

@@ -1,16 +1,16 @@
 <script setup>
-import ToolsBar from '../components/pedigreedb/SortFilterData.vue'
-import ActionBar from '../components/pedigreedb/ActionButtons.vue'
-import TableData from '../components/pedigreedb/TableData.vue'
+import SortFilterButtons from '../components/SortFilter.vue'
+import TableButtons from '../components/TableButtons.vue'
+import TableData from '../components/TableData.vue'
 </script>
 
 <template>
   <div class="main">
-    <div class="tool-bar">
-      <ToolsBar />
+    <div>
+      <SortFilterButtons />
     </div>
-    <div class="action-bar">
-      <ActionBar />
+    <div>
+      <TableButtons />
     </div>
     <div class="table">
       <TableData />
@@ -23,4 +23,4 @@ import TableData from '../components/pedigreedb/TableData.vue'
   height: 100%;
 }
 
-</style>
+</style>../components/SortFilter.vue../components/TableButtons.vue

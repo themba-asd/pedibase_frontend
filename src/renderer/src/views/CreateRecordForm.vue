@@ -80,44 +80,47 @@
             <input type="radio">
             offspring
           </div>
-        <div>
+          <div>
             <input type="radio">
             no-offspring
-        </div>
+          </div>
         </label>
       </div>
     </form>
     <div>
-        <button type="button">Creat Record</button>
-    </div>   
+      <button type="button">Creat Record</button>
+    </div>
   </div>
 </template>
 
 
 <style scoped>
 .main {
-    display: grid;
-    height: 100%;
-    align-content: space-between;
-    padding: .5rem;
+  display: grid;
+  height: 100%;
+  align-content: space-between;
+  padding: .5rem;
 }
 
 form {
-    display: flex;
-    font-size: 18px;
+  display: flex;
+  font-size: 18px;
 }
+
 form div,
 form div label {
-    display: grid;
-    width: 100%;
-    padding-right: 1rem;
+  display: grid;
+  width: 100%;
+  padding-right: 1rem;
 }
+
 form div label div {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }
+
 input[type='button'] {
-    font-size: 20px;
+  font-size: 20px;
 }
 </style>

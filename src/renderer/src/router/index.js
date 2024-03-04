@@ -32,7 +32,7 @@ const router = createRouter({
       path: '/create',
       name: 'CreateRecordView',
       component: () => import('../views/CreateRecordForm.vue')
-    },
+    }
   ]
 })
 

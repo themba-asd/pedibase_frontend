@@ -1,5 +1,5 @@
 <script setup>
-import TableData from '../components/pedigreedb/TableData.vue';
+import TableData from '../components/TableData.vue';
 
 </script>
 <template>

@@ -14,5 +14,4 @@ main {
   height: 100svh;
   overflow: hidden;
 }
-
 </style>./views/Navigation.vue
