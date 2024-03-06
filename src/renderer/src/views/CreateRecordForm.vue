@@ -1,95 +1,209 @@
-<script setup></script>
+<script setup>
+import SearchHeader from '../components/SearchHeader.vue'
+
+</script>
 
 <template>
   <div class="main">
+
     <div>
-      <input type="button" value="Create New Pedibase Form">
+      <SearchHeader title="Add a new dog:" placeholder="Enter the dog's name" />
     </div>
+    <hr>
+    
     <form action method="post">
+
       <div>
         <label>
-          identifier
-          <input type="number">
-        </label>
-        <label>
-          name
+          Call Name:
           <input type="text">
         </label>
+
         <label>
-          sire
+          RegNo:
           <input type="number">
         </label>
+
         <label>
-          dam
-          <input type="number">
-        </label>
-      </div>
-      <div>
-        <label>
-          kind
+          Sire:
           <input type="text">
         </label>
+
         <label>
-          breeder
-          <input type="number">
-        </label>
-        <label>
-          description
+          Dam:
           <input type="text">
         </label>
+
         <label>
-          dna registration
-          <input type="text">
+          Sex:
+          <select>
+            <option value="">Select Sex</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
         </label>
-      </div>
-      <div>
+
         <label>
-          identifier
-          <input type="number">
-        </label>
-        <label>
-          name
-          <input type="text">
-        </label>
-        <label>
-          sire
-          <input type="number">
-        </label>
-        <label>
-          dam
-          <input type="number">
-        </label>
-      </div>
-      <div>
-        <label>
-          birthdate
+          Date of Birth:
           <input type="date">
         </label>
+
         <label>
-          <div>
-            <input type="radio">
-            female
-          </div>
-          <div>
-            <input type="radio">
-            male
-          </div>
+          PreTitle:
+          <input type="text">
         </label>
+
         <label>
-          <div>
-            <input type="radio">
-            offspring
-          </div>
-          <div>
-            <input type="radio">
-            no-offspring
-          </div>
+          PostTitle:
+          <input type="text">
         </label>
+
+        <label>
+          Cotation:
+          <input type="text">
+        </label>
+
+        <label>
+          Cotation Earned Date:
+          <input type="date">
+        </label>
+
+        <label>
+          Color:
+          <select>
+            <option value="">Select Color</option>
+            <option value="black">Black</option>
+            <option value="brown">Brown</option>
+            <option value="grey">Grey</option>
+            <option value="white">White</option>
+          </select>
+        </label>
+
+        <label>
+          height:
+          <input type="number">
+        </label>
+
+        <label>
+          Weight:
+          <input type="number">
+        </label>
+
       </div>
+
+      <div>
+
+        <label>
+          CHIC:
+          <input type="text">
+        </label>
+
+        <label>
+          OFA:
+          <input type="text">
+        </label>
+
+        <label>
+          Hips:
+          <input type="text">
+        </label>
+
+        <label>
+          Hips Date
+          <input type="date">
+        </label>
+
+        <label>
+          Elbow:
+          <input type="text">
+        </label>
+
+        <label>
+          Elbow Date
+          <input type="date">
+        </label>
+
+        <label>
+          Cardiac:
+          <input type="text">
+        </label>
+
+        <label>
+          Cardiac Date
+          <input type="date">
+        </label>
+
+        <label>
+          Eyes:
+          <input type="text">
+        </label>
+
+        <label>
+          Eye Test Date:
+          <input type="date">
+        </label>
+
+      </div>
+
+      <div>
+
+        <label>
+          Identification No:
+          <input type="text">
+        </label>
+
+        <label>
+          Breeder:
+          <input type="text">
+        </label>
+
+        <label>
+          Owner:
+          <input type="text">
+        </label>
+
+        <label>
+          Country of Origin:
+          <input type="text">
+        </label>
+
+        <label>
+            Breeding Dog:
+
+            <select>
+              <option value="">Select Breeding</option>
+              <option value="active">Active</option>
+              <option value="retired">Retired</option>
+              <option value="pet">Pet</option>
+            </select>
+
+        </label>
+
+        <label>
+          Date of Death:
+          <input type="date">
+        </label>
+
+        <label>
+          DNA Profile:
+          <input type="file">
+        </label>
+
+        <label>
+          Photo:
+          <input type="file">
+        </label>
+
+      </div>
+
     </form>
+    <hr>
+
     <div>
-      <button type="button">Creat Record</button>
+      <button type="button">Save and Submit</button>
+      <button type="button">Cancel</button>
     </div>
+
   </div>
 </template>
 
@@ -98,29 +212,31 @@
 .main {
   display: grid;
   height: 100%;
-  align-content: space-between;
-  padding: .5rem;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 form {
   display: flex;
-  font-size: 18px;
+  justify-content: space-between;
 }
 
-form div,
-form div label {
+form div {
   display: grid;
-  width: 100%;
-  padding-right: 1rem;
+  height: 100%;
+  gap: .2rem;
 }
 
+form div label,
 form div label div {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  justify-content: space-between;
 }
 
-input[type='button'] {
-  font-size: 20px;
+form div label,
+form div label div {
+  gap: 5rem;
 }
+
 </style>

@@ -5,7 +5,7 @@ import PedibaseLogo from '../components/icons/PedibaseLogo.vue';
 </script>
 
 <template>
-  <div class="dashboard">
+  <div class="main">
     <div class="nav">
       <div class="nav-logo">
         <PedibaseLogo />
@@ -16,7 +16,7 @@ import PedibaseLogo from '../components/icons/PedibaseLogo.vue';
         <RouterLink to="/diagram">Pedigree Diagram</RouterLink>
         <RouterLink to="/pending">Pending Breeds</RouterLink>
         <RouterLink to="/breeders">Breeders Info</RouterLink>
-        <RouterLink to="/create">Create Record</RouterLink>
+        <RouterLink to="/create">Add New Dog</RouterLink>
       </div>
     </div>
     <div class="router-view">
@@ -26,18 +26,14 @@ import PedibaseLogo from '../components/icons/PedibaseLogo.vue';
 </template>
 
 <style scoped>
-.dashboard {
-  display: grid;
+.main {
   height: 100%;
-  gap: .1rem;
-  padding: .1rem .1rem .1rem .1rem;
-  border: 5px solid rgba(178, 168, 168, 0.689);
 }
 
 .nav {
   display: flex;
-  align-items: center;
-  padding: 1rem;
+  height: 4rem;
+  padding: 1.25rem 1rem;
   background: -webkit-linear-gradient(315deg, #88ccae 25%, #888b9c);
 }
 

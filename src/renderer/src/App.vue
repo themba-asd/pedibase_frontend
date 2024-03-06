@@ -1,10 +1,19 @@
 <script setup>
 import Navigation from './views/Navigation.vue'
+import TheFooter from './views/TheFooter.vue';
 </script>
 
 <template>
   <main>
-    <Navigation />
+
+    <div class="nav">
+      <Navigation />
+    </div>
+
+    <div class="footer">
+      <TheFooter />
+    </div>
+
   </main>
 </template>
 
@@ -13,5 +22,13 @@ main {
   width: 100svw;
   height: 100svh;
   overflow: hidden;
+  padding: .1rem;
+  border: 5px solid rgba(178, 168, 168, 0.689);
 }
-</style>./views/Navigation.vue
+
+.nav {
+  height: 94%;
+  margin-bottom: .1rem;
+}
+
+</style>
