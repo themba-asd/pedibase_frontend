@@ -1,42 +1,79 @@
-# Pedibase
+# electron-vite-vue
 
-# Pedigree Database Management System
+🥳 Really simple `Electron` + `Vue` + `Vite` boilerplate.
 
-An Electron application with Vue
+<!-- [![awesome-vite](https://awesome.re/mentioned-badge.svg)](https://github.com/vitejs/awesome-vite) -->
+<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/ae3863e3-1aec-4eb1-8f9f-1890af56929d/deploy-status)](https://app.netlify.com/sites/electron-vite/deploys) -->
+<!-- [![GitHub license](https://img.shields.io/github/license/caoxiemeihao/electron-vite-vue)](https://github.com/electron-vite/electron-vite-vue/blob/main/LICENSE) -->
+<!-- [![GitHub stars](https://img.shields.io/github/stars/caoxiemeihao/electron-vite-vue?color=fa6470)](https://github.com/electron-vite/electron-vite-vue) -->
+<!-- [![GitHub forks](https://img.shields.io/github/forks/caoxiemeihao/electron-vite-vue)](https://github.com/electron-vite/electron-vite-vue) -->
+[![GitHub Build](https://github.com/electron-vite/electron-vite-vue/actions/workflows/build.yml/badge.svg)](https://github.com/electron-vite/electron-vite-vue/actions/workflows/build.yml)
+[![GitHub Discord](https://img.shields.io/badge/chat-discord-blue?logo=discord)](https://discord.gg/sRqjYpEAUK)
 
-## Recommended IDE Setup
+## Features
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+📦 Out of the box  
+🎯 Based on the official [template-vue-ts](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-vue-ts), less invasive  
+🌱 Extensible, really simple directory structure  
+💪 Support using Node.js API in Electron-Renderer  
+🔩 Support C/C++ native addons  
+🖥 It's easy to implement multiple windows  
 
-## Project Setup
-Clone this repo to your local directory and run the setups
+## Quick Setup
 
-### Install
+```sh
+# clone the project
+git clone https://github.com/electron-vite/electron-vite-vue.git
 
-```bash
-$ npm install
+# enter the project directory
+cd electron-vite-vue
+
+# install dependency
+npm install
+
+# develop
+npm run dev
 ```
 
-### Development
+## Debug
 
-```bash
-$ npm run dev
+![electron-vite-react-debug.gif](https://github.com/electron-vite/electron-vite-react/blob/main/electron-vite-react-debug.gif?raw=true)
+
+## Directory
+
+```diff
++ ├─┬ electron
++ │ ├─┬ main
++ │ │ └── index.ts    entry of Electron-Main
++ │ └─┬ preload
++ │   └── index.ts    entry of Preload-Scripts
+  ├─┬ src
+  │ └── main.ts       entry of Electron-Renderer
+  ├── index.html
+  ├── package.json
+  └── vite.config.ts
 ```
 
-### Build
+<!--
+## Be aware
 
-```bash
-# For windows
-$ npm run build:win
+🚨 By default, this template integrates Node.js in the Renderer process. If you don't need it, you just remove the option below. [Because it will modify the default config of Vite](https://github.com/electron-vite/vite-plugin-electron-renderer#config-presets-opinionated).
 
-# For macOS
-$ npm run build:mac
+```diff
+# vite.config.ts
 
-# For Linux
-$ npm run build:linux
+export default {
+  plugins: [
+-   // Use Node.js API in the Renderer-process
+-   renderer({
+-     nodeIntegration: true,
+-   }),
+  ],
+}
 ```
--------
-This pedigree database is a specialized database designed to store and manage information about the ancestry of purebred dogs. It essentially functions like a family tree, recording their lineage over several generations. Here's a breakdown of its key functions and purposes:
-Recording and Maintaining Information:
-The database stores details about individual dogs, including their breed, name, registration number, date of birth, and other relevant information.
-Crucially, it also records the parents, grandparents, and even further ancestors of each dog, creating a comprehensive lineage record.
+-->
+
+## FAQ
+
+- [C/C++ addons, Node.js modules - Pre-Bundling](https://github.com/electron-vite/vite-plugin-electron-renderer#dependency-pre-bundling)
+- [dependencies vs devDependencies](https://github.com/electron-vite/vite-plugin-electron-renderer#dependencies-vs-devdependencies)
