@@ -1,11 +1,18 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import DropDownMenu from './SearchHeaderDropDown.vue';
 
+import { listOfBreeders } from '../api/breedersdata';
+
 defineProps<{
-  value: String,
-  placeholder: string,
-  searchListResults?: Object[]
+  value: String
 }>()
+
+let x = ref(false)
+
+let visibleMenu = (): boolean => {
+  return x.value = !x.value
+}
 
 </script>
 
@@ -14,13 +21,13 @@ defineProps<{
   <div class="main">
     <div class="search">
       <input type="button" :value>
-      <div>
-        <input type="text" :placeholder>
+      <div @click="visibleMenu" @focusout="visibleMenu">
+        <input type="text" placeholder="Search for something..">
         <button>Search</button>
       </div>
     </div>
-    <div class="dropdown">
-      <DropDownMenu />
+    <div v-if="x" class="dropdown">
+      <DropDownMenu :array="listOfBreeders" />
     </div>
   </div>
 

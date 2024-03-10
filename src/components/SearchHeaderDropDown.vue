@@ -1,7 +1,12 @@
 <script setup lang="ts">
 
-const props = defineProps<{
-  array?: Object[]
+type breederObj = {
+  id: number,
+  name: string
+}
+
+defineProps<{
+  array?: breederObj[]
 }>()
 
 </script>
@@ -12,7 +17,7 @@ const props = defineProps<{
     <select id="dropdown" class="sort-filter-button">
       <option disabled selected>Click to select below</option>
       <option
-        v-for="item in props.array" 
+        v-for="item in array" 
         :key="item.id" 
       >
         {{ item.name }}

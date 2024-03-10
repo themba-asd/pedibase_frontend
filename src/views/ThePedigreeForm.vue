@@ -1,23 +1,9 @@
 <script setup lang="ts">
-import SearchHeader from '../components/SearchHeader.vue'
-
-let array: Object[]
-
 </script>
 
 <template>
   
   <div class="router-main-view">
-    
-    <div>
-      <SearchHeader 
-        value="Add a new dog:" 
-        placeholder="Enter the dog's name" 
-        :searchListResults=array
-      />
-    </div>
-
-    <hr>
 
     <form method="post">
 

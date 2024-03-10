@@ -1,21 +1,9 @@
 <script setup lang="ts">
-import SearchHeader from '../components/SearchHeader.vue';
-
-let array: Object[]
-
 </script>
+
 <template>
 
   <div class="router-main-view">
-
-    <div>
-      <SearchHeader 
-        value="Pedigree Chart:" 
-        placeholder="Enter the name or id"
-        :searchListResults=array
-      />
-    </div>
-    <hr>
 
     <div class="chart">
 
