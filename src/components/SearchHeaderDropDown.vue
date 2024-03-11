@@ -1,12 +1,8 @@
 <script setup lang="ts">
-
-type breederObj = {
-  id: number,
-  name: string
-}
+import { BreederType } from '../api/breedersdata';
 
 defineProps<{
-  array?: breederObj[]
+  array?: BreederType[]
 }>()
 
 </script>
@@ -16,10 +12,7 @@ defineProps<{
   <div>
     <select id="dropdown" class="sort-filter-button">
       <option disabled selected>Click to select below</option>
-      <option
-        v-for="item in array" 
-        :key="item.id" 
-      >
+      <option v-for="item in array" :key="item.id">
         {{ item.name }}
       </option>
     </select>
@@ -31,5 +24,4 @@ defineProps<{
 select {
   width: 12.65rem;
 }
-
 </style>

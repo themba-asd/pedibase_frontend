@@ -6,24 +6,24 @@ import { ref } from 'vue';
 
 let title = ref("Pedibase")
 
-const setTitle = (text: string) => title.value = text 
+const changeTitle = (text: string) => title.value = text 
 
 </script>
 
 <template>
   
   <div class="main">
-    <div class="nav">
+    <div class="nav header-footer">
       <div class="nav-logo">
         <PedibaseLogo />
       </div>
       <div class="nav-links">
-        <RouterLink @click="setTitle('Home')" to="/">Home</RouterLink>
-        <RouterLink @click="setTitle('Pedigree Overview:')" to="/pedigree">Pedigree DB</RouterLink>
-        <RouterLink @click="setTitle('Pending Chart:')" to="/diagram">Pedigree Diagram</RouterLink>
-        <RouterLink @click="setTitle('Pending Breeds:')"  to="/pending">Pending Breeds</RouterLink>
-        <RouterLink @click="setTitle('Breeders Info:')" to="/breeders">Breeders Info</RouterLink>
-        <RouterLink @click="setTitle('Add a new dog:')" to="/create">Add New Dog</RouterLink>
+        <RouterLink @click="changeTitle('Home')" to="/">Home</RouterLink>
+        <RouterLink @click="changeTitle('Pedigree Overview:')" to="/pedigree">Pedigree DB</RouterLink>
+        <RouterLink @click="changeTitle('Pending Chart:')" to="/diagram">Pedigree Diagram</RouterLink>
+        <RouterLink @click="changeTitle('Pending Breeds:')"  to="/pending">Pending Breeds</RouterLink>
+        <RouterLink @click="changeTitle('Breeders Info:')" to="/breeders">Breeders Info</RouterLink>
+        <RouterLink @click="changeTitle('Add a new dog:')" to="/create">Add New Dog</RouterLink>
       </div>
     </div>
     <div class="section">
@@ -48,7 +48,6 @@ const setTitle = (text: string) => title.value = text
   display: flex;
   height: 3.5rem;
   padding: 1rem;
-  background: -webkit-linear-gradient(315deg, #88ccae 25%, #888b9c);
 }
 
 .nav-links {

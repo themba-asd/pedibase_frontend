@@ -1,5 +1,5 @@
 
-type PedigreeChart = {
+export type PedigreeChartType = {
   Id?: Number,
   Name?: String,
   RegNo?: Number,
@@ -10,7 +10,7 @@ type PedigreeChart = {
   Breeder?: String
 }
 
-export let mockData: PedigreeChart[] = [
+export let mockData: PedigreeChartType[] = [
   {
     Id: 1,
     Name: 'Maxxy Brown Rax',
@@ -79,14 +79,10 @@ export let mockData: PedigreeChart[] = [
     Id: 12,
     Name: 'Africa"s Bold Queen Pred',
   },
-  {
-    
-  },
+  {},
   {
     Id: 14,
     Name: 'Africa"s Bold Queen Pred',
   },
-  {
-
-  },
+  {},
 ]

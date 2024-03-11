@@ -3,6 +3,9 @@ import { mockData } from '../api/data';
 
 let items = mockData
 
+let count = 1
+let incrementCount = () => count++
+
 </script>
 
 <template>
@@ -10,6 +13,7 @@ let items = mockData
   <table class="table-columns">
     <thead>
       <tr>
+        <th></th>
         <th v-for="(item, key, index) in items[0]" :key>
           {{ key }}
         </th>
@@ -17,6 +21,7 @@ let items = mockData
     </thead>
     <tbody class="records">
       <tr v-for="item in items" :key="item.Id">
+        <th>{{ incrementCount() }}</th>
         <th v-for="prop in item" :key="prop">
           {{ prop }}
         </th>

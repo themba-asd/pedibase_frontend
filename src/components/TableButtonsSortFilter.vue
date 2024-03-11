@@ -12,7 +12,6 @@
       <option>Breeder</option>
     </select>
   </div>
-
   <div>
     <select id="dropdown" class="sort-filter-button">
       <option disabled selected>Sort By</option>

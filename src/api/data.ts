@@ -1,3 +1,5 @@
+import { ref } from "vue"
+
 
 export let mockData = [
   {
@@ -1841,3 +1843,7 @@ export let mockData = [
     IdentificationNo: '1234567890',
   },
 ]
+
+let count = ref(mockData.length)
+
+export let countHandler = () => count.value

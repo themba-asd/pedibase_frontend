@@ -1,10 +1,10 @@
 
-export type Breeder = {
+export type BreederType = {
   id: string | number,
   name: string
 }
 
-export let listOfBreeders: Breeder[] = [
+export let listOfBreeders: BreederType[] = [
   {
     id: 1,
     name: 'Breeder 1'
@@ -18,4 +18,3 @@ export let listOfBreeders: Breeder[] = [
     name: 'Breeder 3'
   }
 ] 
-//example

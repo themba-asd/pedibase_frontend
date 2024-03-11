@@ -1,17 +1,22 @@
+<script setup lang="ts">
+</script>
+
+
 <template>
+
   <div>
     <h1>
       <h1>
-        What is Home?...
-        Home is where you trust the toilet seat!
+        Where is Home?...
+      </h1>
+      <h1>
+        Home is where you trust the ______ seat!
       </h1>
     </h1>
   </div>
+
 </template>
 
-<script setup lang="ts">
-
-</script>
 
 <style scoped>
 

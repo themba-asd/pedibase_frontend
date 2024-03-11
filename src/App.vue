@@ -4,17 +4,16 @@ import TheFooter from './views/TheFooter.vue';
 </script>
 
 <template>
-  <main>
 
+  <main>
     <div class="nav">
       <Navigation />
     </div>
-
     <div class="footer">
       <TheFooter />
     </div>
-
   </main>
+
 </template>
 
 <style scoped>
