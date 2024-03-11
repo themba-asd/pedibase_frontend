@@ -1,87 +1,82 @@
-<script setup lang="ts">
+<script lang="ts" setup>
+import { mockData } from '../api/pedigreeChart';
+
+type PedigreeChart = {
+  Id?: Number,
+  Name?: String,
+  RegNo?: Number,
+  Sex?: String,
+  Dob?: Date | String,
+  PreTitle?: String,
+  PostTitle?: String,
+  Breeder?: String
+}
+
+//this will determine how many child-divs to create
+let htmlDivCountArray = ['x']
+let htmlDivCounterHandler = (): void => {
+  if (htmlDivCountArray.length < 8) htmlDivCountArray.push('x')
+  return
+}
+
+let chartContentItems: PedigreeChart[] = [...mockData]
+
+let chartContentHandler = (): string | undefined => {
+  let item = chartContentItems.shift()
+  let rawHTML = `
+    <p>${item?.Id??'No Information'}</p>
+    <p>${item?.Name??'Unknown'}</p>
+    <p>${item?.RegNo??''}</p>
+    <p>${item?.Dob??''}</p>
+    <p>${item?.PreTitle??''}</p>
+    <p>${item?.PostTitle??''}</p>
+    <p>${item?.Breeder??''}</p>`
+  return rawHTML
+}
+
 </script>
 
 <template>
 
   <div class="router-main-view">
 
-    <div class="chart">
-
-      <div class="child">
-        <div>1</div>
-      </div>
-
-      <div class="parents">
-        <div>2</div>
-        <div>3</div>
-      </div>
-
-      <div class="grandparents">
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-      </div>
-
-      <div class="greatgrandparents">
-        <div>
-          <div>8</div>
-          <div>8</div>
+    <div>
+      <div class="chart">
+        <div v-for="item in '1234'" :key="item" class="parent">
+          <div v-for="item in htmlDivCountArray" :key="item" class="child">
+            {{ htmlDivCounterHandler() }}
+          <div v-html="chartContentHandler()" class="content"></div>
         </div>
-
-        <div>
-          <div>9</div>
-          <div>9</div>
-        </div>
-
-        <div>
-          <div>10</div>
-          <div>10</div>
-        </div>
-
-        <div>
-          <div>11</div>
-          <div>11</div>
-        </div>
-
       </div>
-
     </div>
-
   </div>
+</div>
 
 </template>
 
 <style scoped>
 .chart {
   display: flex;
-  padding: 3rem;
-  border: 1px solid grey;
-
-  div {
-    color: grey;
-  }
+  justify-content: space-evenly;
 }
 
-.child,
-.parents,
-.grandparents,
-.greatgrandparents {
+.parent,
+.child {
   display: grid;
-  align-items: center;
-  justify-content: space-evenly;
-  flex: 1;
-  gap: 1rem;
+  align-content: space-evenly;
+}
 
-  >div {
-    display: grid;
-    width: 12rem;
-    height: 5rem;
-    border: 1px solid;
+.child {
+  font-weight: 500;
+  line-height: 1.3rem;
+  background: -webkit-linear-gradient(315deg, #88ccaf 25%, #888b9c);
+}
 
-    div:first-child {
-      border-bottom: 1px solid;
-    }
-  }
+.content {
+  padding: .5rem 1rem;
+  border: 1px solid purple;
+}
+.parent:last-child .child:not(.child:first-of-type) .content  {
+  border-top: 0;
 }
 </style>

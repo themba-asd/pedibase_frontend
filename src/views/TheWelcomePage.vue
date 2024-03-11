@@ -1,16 +1,18 @@
-<script lang="ts" setup>
-</script>
-
 <template>
-
   <div>
-    <h2>Welcome Home</h2>
+    <h1>
+      <h1>
+        What is Home?...
+        Home is where you trust the toilet seat!
+      </h1>
+    </h1>
   </div>
-
 </template>
 
+<script setup lang="ts">
+
+</script>
+
 <style scoped>
-div {
-  background: -webkit-linear-gradient(315deg, #88ccae 25%, #888b9c);
-}
+
 </style>

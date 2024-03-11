@@ -1,7 +1,19 @@
-export let mockData = [
+
+type PedigreeChart = {
+  Id?: Number,
+  Name?: String,
+  RegNo?: Number,
+  Sex?: String,
+  Dob?: Date | String,
+  PreTitle?: String,
+  PostTitle?: String,
+  Breeder?: String
+}
+
+export let mockData: PedigreeChart[] = [
   {
-    id: 1,
-    Name: 'Max Max',
+    Id: 1,
+    Name: 'Maxxy Brown Rax',
     RegNo: 124334255,
     Sex: 'Male',
     Dob: '20240112',
@@ -10,72 +22,71 @@ export let mockData = [
     Breeder: 'Gemini Bard'
   },
   {
-    id: 2,
-    Name: 'Max Max',
+    Id: 2,
+    Name: 'Dassy Packky Sag',
     RegNo: 124334255,
     PreTitle: 'CHF',
     PostTitle: 'GS',
   },
   {
-    id: 3,
-    Name: 'Max Max',
+    Id: 3,
+    Name: 'Africa"s Bold Queen Pred',
     RegNo: 124334255,
     PreTitle: 'CHF',
     PostTitle: 'GS',
   },
   {
-    id: 4,
-    Name: 'Max Max',
+    Id: 4,
+    Name: 'Africa"s Bold Queen Pred',
     RegNo: 124334255,
     PreTitle: 'CHF',
   },
   {
-    id: 5,
-    Name: 'Max Max',
+    Id: 5,
+    Name: 'King German Pork',
     RegNo: 124334255,
     PreTitle: 'CHF',
   },
   {
-    id: 6,
-    Name: 'Max Max',
+    Id: 6,
+    Name: 'Prince Rock Pork',
     RegNo: 124334255,
     PreTitle: 'CHF',
   },
   {
-    id: 7,
-    Name: 'Max Max',
+    Id: 7,
+    Name: 'Maxxy Brown Rax',
     RegNo: 124334255,
     PreTitle: 'CHF',
   },
   {
-    id: 8,
-    Name: 'Max Max',
+    Id: 8,
+    Name: 'Africa"s Bold Queen Pred',
   },
   {
-    id: 9,
-    Name: 'Max Max',
+    Id: 9,
+    Name: 'King German Pork',
   },
   {
-    id: 10,
-    Name: 'Max Max',
+    Id: 10,
+    Name: 'Africa"s Bold Queen Pred',
   },
   {
-    id: 11,
-    Name: 'Max Max',
+    Id: 11,
+    Name: 'Maxxy Brown Rax',
   },
   {
-    id: 12,
-    Name: 'Max Max',
+    Id: 12,
+    Name: 'Africa"s Bold Queen Pred',
   },
   {
     
   },
   {
-    id: 14,
-    Name: 'Max Max',
+    Id: 14,
+    Name: 'Africa"s Bold Queen Pred',
   },
   {
-    id: 15,
-    Name: 'Max Max',
+
   },
 ]
