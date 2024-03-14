@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Navigation from './views/TheNavigation.vue'
 import TheFooter from './views/TheFooter.vue';
 </script>
