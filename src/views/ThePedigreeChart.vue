@@ -55,8 +55,7 @@ let chartContentHandler = (): string | undefined => {
 .child {
   font-weight: 500;
   line-height: 1.3rem;
-  background: -webkit-linear-gradient(315deg, #88ccaf 25%, #bbc4f1);
-
+  background: -webkit-linear-gradient(315deg, #797e7a 25%, #9fa7a7);
 }
 
 .content {

@@ -3,8 +3,13 @@ import { mockData } from '../api/data';
 
 let items = mockData
 
-let count = 1
-let incrementCount = () => count++
+let dataCounter = 1
+let incrementCounter = () => dataCounter++
+
+defineProps<{
+  buttonText: string
+  buttonClass: string
+}>()
 
 </script>
 
@@ -12,16 +17,20 @@ let incrementCount = () => count++
 
   <table class="table-columns">
     <thead>
-      <tr>
-        <th></th>
+      <tr class="table-header">
+        <th>Option</th> 
+        <th>No.</th>
         <th v-for="(item, key, index) in items[0]" :key>
           {{ key }}
         </th>
       </tr>
     </thead>
-    <tbody class="records">
+    <tbody dy class="records">
       <tr v-for="item in items" :key="item.Id">
-        <th>{{ incrementCount() }}</th>
+        <th>
+          <button :class="buttonClass">{{ buttonText }}</button>
+        </th>
+        <th>{{ incrementCounter() }}</th>
         <th v-for="prop in item" :key="prop">
           {{ prop }}
         </th>
@@ -31,4 +40,16 @@ let incrementCount = () => count++
 
 </template>
 
-<style scoped></style>
+<style scoped>
+thead {
+  background:#aaaaaa;
+}
+thead th {
+  color: #1f1e1e;
+  font-weight: 500;
+}
+tbody th {
+  font-weight: 100;
+}
+
+</style>

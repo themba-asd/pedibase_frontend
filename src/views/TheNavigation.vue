@@ -19,10 +19,9 @@ const changeTitle = (text: string) => title.value = text
       </div>
       <div class="nav-links">
         <RouterLink @click="changeTitle('Home')" to="/">Home</RouterLink>
-        <RouterLink @click="changeTitle('Pedigree Overview:')" to="/pedigree">Pedigree DB</RouterLink>
         <RouterLink @click="changeTitle('Pending Chart:')" to="/diagram">Pedigree Diagram</RouterLink>
+        <RouterLink @click="changeTitle('Pedigree Overview:')" to="/pedigree">Pedigree DB</RouterLink>
         <RouterLink @click="changeTitle('Pending Breeds:')"  to="/pending">Pending Breeds</RouterLink>
-        <RouterLink @click="changeTitle('Breeders Info:')" to="/breeders">Breeders Info</RouterLink>
         <RouterLink @click="changeTitle('Add a new dog:')" to="/create">Add New Dog</RouterLink>
       </div>
     </div>
@@ -65,4 +64,11 @@ const changeTitle = (text: string) => title.value = text
   padding: .8rem 1rem;
 }
 
+a {
+  border: none;
+  background: -webkit-linear-gradient(315deg, #ffffff 25%, #c7c7c7, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 </style>

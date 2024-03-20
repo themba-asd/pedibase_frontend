@@ -8,7 +8,7 @@ import TableData from '../components/TableData.vue';
   <div class="router-main-view">
     <TableButtons />
     <div class="table">
-      <TableData />
+      <TableData buttonText="+" buttonClass="table-add-buttons"/>
     </div>
   </div>
 

@@ -7,10 +7,7 @@ import TableButtons from '../components/TableButtons.vue';
 
   <div class="router-main-view">
     <div>
-      <TableButtons />
-    </div>
-    <div class="table">
-      <table class="table-columns">
+      <table>
         <thead>
           <tr>
             <th>id</th>
@@ -20,6 +17,15 @@ import TableButtons from '../components/TableButtons.vue';
             <th>location</th>
           </tr>
         </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Frank Bard</td>
+            <td>frank@fastemail.org</td>
+            <td>1234567890</td>
+            <td>Gemini Scape</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>
@@ -27,4 +33,8 @@ import TableButtons from '../components/TableButtons.vue';
 </template>
 
 <style scoped>
+
+td {
+  padding: 1rem;
+}
 </style>

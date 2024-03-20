@@ -38,7 +38,7 @@ form {
 form div {
   display: grid;
   height: 100%;
-  gap: .1rem;
+  gap: .3rem;
 }
 
 </style>

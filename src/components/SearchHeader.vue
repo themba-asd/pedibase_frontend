@@ -42,6 +42,10 @@ let setVisible = (): boolean => visible.value = !visible.value
   justify-content: space-between;
 }
 
+.header-title {
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 input[type='button'] {
   font-size: 22px;
 }

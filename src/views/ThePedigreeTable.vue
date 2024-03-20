@@ -12,7 +12,7 @@ import { countHandler } from '../api/data';
       <TableButtons />
     </div>
     <div class="table">
-      <TableData />
+      <TableData buttonText="X" buttonClass="table-remove-buttons"/>
     </div>
     <small>
       Records Returned: {{ countHandler() }}

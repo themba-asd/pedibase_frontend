@@ -21,8 +21,8 @@ main {
   width: 100svw;
   height: 100svh;
   overflow: hidden;
-  padding: .1rem;
-  border: 5px solid rgba(178, 168, 168, 0.689);
+  padding: 0rem;
+  border: 0px solid rgb(158, 155, 155);
 }
 
 .nav {
