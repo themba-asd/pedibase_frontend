@@ -3,8 +3,7 @@ import PrimaryForm from '../components/forms/PrimaryForm.vue';
 import SecondaryForm from '../components/forms/SecondaryForm.vue';
 import TertiaryForm from '../components/forms/TertiaryForm.vue';
 
-
-let cancel = () => {
+let cancelForm = () => {
   document.querySelectorAll('input').forEach(element => element.value = '')
   document.querySelectorAll('select').forEach(element => element.value = '')
 }
@@ -22,7 +21,7 @@ let cancel = () => {
     <hr>
     <div>
       <button type="button">Save and Submit</button>
-      <button type="button" @click="cancel">Cancel</button>
+      <button type="button" @click="cancelForm">Cancel</button>
     </div>
   </div>
 

@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { mockData, PedigreeChartType } from '../api/pedigreeChart';
-
-let htmlDivCountArray = ['x'] //this will determine how many child-divs to create
-
+//array length will determine how many child-divs to create
+let htmlDivCountArray = ['x'] 
+// set the the array length
 let htmlDivCounterHandler = (): void => {
   if (htmlDivCountArray.length < 8) htmlDivCountArray.push('x')
   return

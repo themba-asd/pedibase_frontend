@@ -15,11 +15,11 @@
   width: 22px;
 }
 
-select,
 button:not(.table-add-buttons, .table-remove-buttons),
 input[type='text'],
 input[type='date'],
 input[type='number'],
+select,
 .sort-filter-button {
   min-width: 7rem;
   padding: .3rem;
@@ -39,7 +39,7 @@ input[type='number'],
 table {
   border-collapse: collapse
 }
-th {
+.table-header {
   padding-block: .5rem;
   border-right: 1px solid rgba(99, 97, 97, 0.689);
   border-bottom: 1px solid rgba(126, 124, 124, 0.689);

@@ -17,21 +17,21 @@ defineProps<{
 
   <table class="table-columns">
     <thead>
-      <tr class="table-header">
-        <th>Option</th> 
-        <th>No.</th>
-        <th v-for="(item, key, index) in items[0]" :key>
+      <tr>
+        <th class="table-header">Option</th> 
+        <th class="table-header">No.</th>
+        <th v-for="(item, key, index) in items[0]" :key class="table-header">
           {{ key }}
         </th>
       </tr>
     </thead>
-    <tbody dy class="records">
+    <tbody class="records">
       <tr v-for="item in items" :key="item.Id">
-        <th>
+        <th  class="table-header">
           <button :class="buttonClass">{{ buttonText }}</button>
         </th>
-        <th>{{ incrementCounter() }}</th>
-        <th v-for="prop in item" :key="prop">
+        <th  class="table-header">{{ incrementCounter() }}</th>
+        <th v-for="prop in item" :key="prop"  class="table-header">
           {{ prop }}
         </th>
       </tr>

@@ -6,7 +6,7 @@ import { ref } from 'vue';
 
 let title = ref("Pedibase")
 
-const changeTitle = (text: string) => title.value = text 
+const changeHeaderTitle = (text: string) => title.value = text 
 
 </script>
 
@@ -18,11 +18,11 @@ const changeTitle = (text: string) => title.value = text
         <PedibaseLogo />
       </div>
       <div class="nav-links">
-        <RouterLink @click="changeTitle('Home')" to="/">Home</RouterLink>
-        <RouterLink @click="changeTitle('Pending Chart:')" to="/diagram">Pedigree Diagram</RouterLink>
-        <RouterLink @click="changeTitle('Pedigree Overview:')" to="/pedigree">Pedigree DB</RouterLink>
-        <RouterLink @click="changeTitle('Pending Breeds:')"  to="/pending">Pending Breeds</RouterLink>
-        <RouterLink @click="changeTitle('Add a new dog:')" to="/create">Add New Dog</RouterLink>
+        <RouterLink @click="changeHeaderTitle('Home')" to="/">Home</RouterLink>
+        <RouterLink @click="changeHeaderTitle('Pedigree Chart:')" to="/diagram">Pedigree Diagram</RouterLink>
+        <RouterLink @click="changeHeaderTitle('Pedigree Overview:')" to="/pedigree">Pedigree DB</RouterLink>
+        <RouterLink @click="changeHeaderTitle('Pending Breeds:')"  to="/pending">Pending Breeds</RouterLink>
+        <RouterLink @click="changeHeaderTitle('Add a new dog:')" to="/create">Add New Dog</RouterLink>
       </div>
     </div>
     <div class="section">
